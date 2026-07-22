@@ -1,0 +1,130 @@
+/* 基本設定 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-image: url('image_main.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* 背景画像を固定 */
+}
+
+/* オーバーレイ（画像を暗くする） */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+/* ヘッダー */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* メイン */
+.content-wrapper {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+    padding-bottom: 80px; /* フッターに重ならないように */
+}
+
+/* 記事カード */
+.post-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.post-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.post-date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.post-title {
+    font-size: 28px;
+    margin: 0;
+}
+
+.post-menu-container {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.post-menu-button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* 記事ボディ */
+.post-body {
+    display: flex;
+    align-items: flex-start;
+}
+
+.post-category {
+    background-color: green;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 15px;
+    white-space: nowrap; /* テキストの折り返しを防ぐ */
+}
+
+.post-content {
+    flex: 1;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* フッター */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+}
